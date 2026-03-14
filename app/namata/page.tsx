@@ -33,9 +33,9 @@ const Namata = () => {
                 <button onClick={generate} className="bg-green-600 text-white py-1 px-7 font-bold cursor-pointer hover:bg-green-700 text-xl rounded-xl">Run</button>
             </div>
             <div className="flex flex-col pt-10 items-center">
-                <span className="flex flex-col gap-3 border-3 bg-amber-100 rounded-lg">
+                <span className="flex flex-col gap-3 border-3 border-amber-800 bg-amber-100 rounded-lg">
                     {
-                        table.map((item, index)=> <h1 className="text-xl font-bold bg-amber-300 hover:bg-blue-500 py-1 hover:px-5 hover:text-3xl px-15" key={index}>{item}</h1>)
+                        table.map((item, index)=> <h1 className="text-xl hover:font-bold bg-blue-400 text-white hover:bg-blue-500 py-1 hover:border-black cursor-pointer font-bold hover:border-b-3 px-15 transition-all duration-700" key={index}>{item}</h1>)
                     }
                 </span>
             </div>
