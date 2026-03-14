@@ -1,6 +1,16 @@
 'use client'
 
 import { useState, useEffect } from "react";
+function toBanglaNumber(num: number | string){
+    const en = '0123456789'
+    const bn = '০১২৩৪৫৬৭৮৯'
+
+    return num
+    .toString()
+    .split('')
+    .map(d=> en.includes(d) ? bn[en.indexOf(d)]:d)
+    .join('');
+}
 
 const Namata = () => {
     const [number,setNumber] = useState<number>(0)
@@ -10,7 +20,7 @@ const Namata = () => {
         let result = []
         for (let i = 1; i <= 10; i++){
             // console.log()
-            result.push(`${number} x ${i} = ${(number) * i}`);
+            result.push(`${toBanglaNumber(number)} x ${toBanglaNumber(i)} = ${toBanglaNumber((number) * i)}`);
         }
         setTable(result)
     };
@@ -25,7 +35,7 @@ const Namata = () => {
             <div className="flex flex-col pt-10 items-center">
                 <span className="flex flex-col gap-3 border-3 bg-amber-100 rounded-lg">
                     {
-                        table.map((item, index)=> <tr className="text-xl font-bold bg-amber-300 py-1 px-15" key={index}>{item}</tr>)
+                        table.map((item, index)=> <h1 className="text-xl font-bold bg-amber-300 py-1 px-15" key={index}>{item}</h1>)
                     }
                 </span>
             </div>
