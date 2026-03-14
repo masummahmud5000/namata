@@ -35,7 +35,7 @@ const Namata = () => {
             <div className="flex flex-col pt-10 items-center">
                 <span className="flex flex-col gap-3 border-3 bg-amber-100 rounded-lg">
                     {
-                        table.map((item, index)=> <h1 className="text-xl font-bold bg-amber-300 py-1 px-15" key={index}>{item}</h1>)
+                        table.map((item, index)=> <h1 className="text-xl font-bold bg-amber-300 hover:bg-blue-500 py-1 px-15" key={index}>{item}</h1>)
                     }
                 </span>
             </div>
